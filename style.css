@@ -13,13 +13,14 @@ body {
 }
 
 header {
-    background: #d9d9d960;
+    background: #d9d9d9a8;
     color: black;
     padding: 10px 0;
    
     box-shadow: 0,0,0;
-    position: absolute;
+  
     width: min(100%);
+    position: fixed;
   
 }
 
@@ -30,6 +31,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+  
     
 }
 
@@ -122,13 +124,30 @@ ul li a:hover {
 }
 
 .culture {
-    background: url('image/fete-afrique.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 220px 100%;
-    text-align: center;
-    width: min(100%);
-    height: 100%;
-    background-position: center;
+   background-color: #0E6F04;
+}
 
+
+.intro{
+    display: flex;
+    transform: translate(0px,200px);
+}
+
+
+.intro img{
+    width: 500px;
+    transform: translateY(-50px);
+  
+  
+}
+
+.intro a{
+    font-size: 30px;
+    color: #0E6F04;
+    text-decoration-color: #FFC002;
+}
+
+.intro p{
+    width: 600px;
+    font-size: 20px;
 }
