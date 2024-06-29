@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #d9d9d9;
+    background: #d9d9d9a8;
     color: black;
     padding: 10px 0;
    
@@ -20,13 +20,16 @@ header {
   
     width: min(100%);
     position: fixed;
+    top: 0;
+left: 0;
+z-index: 1000;
   
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-   place-items: center;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -69,7 +72,47 @@ ul li a:hover {
     color:#0E6F04 ;
 }
 
+/* Styles réactifs */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+
+    .logo img {
+        width: 200vw; 
+        max-width: 40px; /* Limite maximale */
+        min-width: 20px; /* Limite minimale */
+    }
+
+    ul li a {
+        padding: 10px 0;
+    }
+}
 /* main */
 .menu{
     background-color: #FFC002;
@@ -79,8 +122,22 @@ ul li a:hover {
  place-items: center;
 transform: translateY(200px);
 position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .menu ul li a{
     color: #0E6F04;
     text-decoration: none;
@@ -100,11 +157,12 @@ main{
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
+    transform: translateY(400px);
+   z-index: -1;
 }
 
 main ul .li{
-    transform: translateY(400px);
+   
     color: #fff ;
     background-color: #FFC002;
     padding: 10px;
@@ -115,26 +173,44 @@ main ul .li{
 main p{
     width: 80%;
     font-size: 15px;
-    transform: translateY(400px);
+  
     }
 
 h2{
-    transform: translateY(400px);
+   
     color: red;
     background-size: 30px;
    
    
 
 }
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+    }
 
 span{
     font-weight: bold;
     color: #FFC002;
-    transform: translateY(400px);
+   
 }
-
-i{
+ i{
     font-weight: bold;
     color: #0E6F04;
-    transform: translateY(400px);
+    
 }
+
+
+@media (max-width: 480px) {
+    .menu ul li {
+        margin: 5px 0;
+    }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .menu li {
+            float: none;
+        }
+    }
